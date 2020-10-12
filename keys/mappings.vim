@@ -21,6 +21,9 @@ if exists('g:vscode')
 
 else
 
+  " Emmet config
+  let g:user_emmet_leader_key=','
+
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
   inoremap <expr> <c-k> ("\<C-p>")
