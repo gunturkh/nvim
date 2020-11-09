@@ -20,6 +20,8 @@ if exists('g:vscode')
   nmap <S-Tab> :Tabprev<CR>
 
 else
+  " Emmet config
+  let g:user_emmet_leader_key=','
 
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
