@@ -22,6 +22,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'suy/vim-context-commentstring'
     " highlight all matches under cursor
     " Plug 'RRethy/vim-illuminate'
+    " For better changing and deleting words inside and around quote, double quote, parenthesis and bracket 
+    " Plug 'wellle/targets.vim'
 
   if exists('g:vscode')
     " Easy motion for VSCode

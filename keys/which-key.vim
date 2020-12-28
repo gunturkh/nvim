@@ -42,7 +42,8 @@ let g:which_key_map['/'] = [ ':call Comment()'                                 ,
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
-let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
+let g:which_key_map['d'] = [ ':Bdelete'                                        , 'delete current buffer' ]
+let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=buffer+,file+'   , 'explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
@@ -53,6 +54,7 @@ let g:which_key_map['u'] = [ ':UndotreeToggle'                                 ,
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 let g:which_key_map['W'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'move window' ]
 let g:which_key_map['z'] = [ 'Goyo'                                            , 'zen' ]
+let g:which_key_map['r'] = [ ':e'                                            , 'refresh current buffer' ]
 
 " Group mappings
 
@@ -101,8 +103,8 @@ let g:which_key_map.b = {
       \ '?' : ['Buffers'                , 'fzf-buffer'],
       \ }
 
-" d is for debug
-let g:which_key_map.d = {
+" D is for debug
+let g:which_key_map.D = {
       \ 'name' : '+debug' ,
       \ 'b' : ['<Plug>VimspectorToggleBreakpoint'              , 'breakpoint'],
       \ 'B' : ['<Plug>VimspectorToggleConditionalBreakpoint'   , 'conditional breakpoint'],
@@ -245,7 +247,7 @@ let g:which_key_map.g = {
       \ 'B' : [':GBrowse'                          , 'browse'],
       \ 'c' : [':Git commit'                       , 'commit'],
       \ 'd' : [':Git diff'                         , 'diff'],
-      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'D' : [':Gvdiffsplit!'                       , 'diff split'],
       \ 'g' : [':GGrep'                            , 'git grep'],
       \ 'G' : [':Gstatus'                          , 'status'],
       \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
