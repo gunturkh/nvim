@@ -109,8 +109,14 @@
 
   "languageserver": {
     "lua": {
-      "command": "/home/chris/.luambenvs/neovim4/bin/lua-lsp",
+      //"command": "/home/chris/.luambenvs/neovim4/bin/lua-lsp",
+      "command": "/Users/gkh/Documents/code/src/github.com/gunturkh/lua-language-server/bin/macOS/lua-language-server",
+      "args": [
+        "-E",
+        "/Users/gkh/Documents/code/src/github.com/gunturkh/lua-language-server/main.lua"
+      ],
       "filetypes": ["lua"],
+      "rootPatterns": [".git/"],
       "trace.server": "verbose"
     }
   },

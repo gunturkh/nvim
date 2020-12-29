@@ -23,7 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " highlight all matches under cursor
     " Plug 'RRethy/vim-illuminate'
     " For better changing and deleting words inside and around quote, double quote, parenthesis and bracket 
-    " Plug 'wellle/targets.vim'
+    Plug 'wellle/targets.vim'
 
   if exists('g:vscode')
     " Easy motion for VSCode
@@ -43,7 +43,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Treesitter
-    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/playground'
     " Cool Icons
     Plug 'kyazdani42/nvim-web-devicons'

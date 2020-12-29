@@ -1,9 +1,13 @@
 " Basic Key Mappings
 
 imap <C-h> <C-w>h
-imap <C-j> <C-w>j
+imap <C-j>  <C-w>j
 imap <C-k> <C-w>k
 imap <C-l> <C-w>l
+" imap ˙ <C-w>h
+" imap ¬ <C-w>j
+" imap ˚ <C-w>l
+" imap ∆ <C-w>l
 " g Leader key
 let mapleader=" "
 " let localleader=" "
@@ -65,11 +69,11 @@ else
   tnoremap <C-h> <C-\><C-N><C-w>h
   tnoremap <C-j> <C-\><C-N><C-w>j
   tnoremap <C-k> <C-\><C-N><C-w>k
-  tnoremap <C-l> <C-\><C-N><C-w>l
+  " tnoremap <C-l> <C-\><C-N><C-w>l
   inoremap <C-h> <C-\><C-N><C-w>h
   inoremap <C-j> <C-\><C-N><C-w>j
   inoremap <C-k> <C-\><C-N><C-w>k
-  inoremap <C-l> <C-\><C-N><C-w>l
+  " inoremap <C-l> <C-\><C-N><C-w>l
   tnoremap <Esc> <C-\><C-n>
 
   " Use alt + hjkl to resize windows
