@@ -1,9 +1,13 @@
 " Basic Key Mappings
 
 imap <C-h> <C-w>h
-imap <C-j> <C-w>j
+imap <C-j>  <C-w>j
 imap <C-k> <C-w>k
 imap <C-l> <C-w>l
+" imap ˙ <C-w>h
+" imap ¬ <C-w>j
+" imap ˚ <C-w>l
+" imap ∆ <C-w>l
 " g Leader key
 let mapleader=" "
 " let localleader=" "
@@ -20,6 +24,8 @@ if exists('g:vscode')
   nmap <S-Tab> :Tabprev<CR>
 
 else
+  " Emmet config
+  let g:user_emmet_leader_key=','
 
   " Emmet config
   let g:user_emmet_leader_key=','
@@ -66,18 +72,32 @@ else
   tnoremap <C-h> <C-\><C-N><C-w>h
   tnoremap <C-j> <C-\><C-N><C-w>j
   tnoremap <C-k> <C-\><C-N><C-w>k
-  tnoremap <C-l> <C-\><C-N><C-w>l
+  " tnoremap <C-l> <C-\><C-N><C-w>l
   inoremap <C-h> <C-\><C-N><C-w>h
   inoremap <C-j> <C-\><C-N><C-w>j
   inoremap <C-k> <C-\><C-N><C-w>k
-  inoremap <C-l> <C-\><C-N><C-w>l
+  " inoremap <C-l> <C-\><C-N><C-w>l
   tnoremap <Esc> <C-\><C-n>
 
   " Use alt + hjkl to resize windows
-  nnoremap <silent> <M-j>    :resize -2<CR>
-  nnoremap <silent> <M-k>    :resize +2<CR>
-  nnoremap <silent> <M-h>    :vertical resize -2<CR>
-  nnoremap <silent> <M-l>    :vertical resize +2<CR>
+  " nnoremap <silent> <M-j>    :resize -2<CR>
+  " nnoremap <silent> <M-k>    :resize +2<CR>
+  " nnoremap <silent> <M-h>    :vertical resize -2<CR>
+  " nnoremap <silent> <M-l>    :vertical resize +2<CR>
+
+  nnoremap <silent> <C-Up>    :resize -2<CR>
+  nnoremap <silent> <C-Down>  :resize +2<CR>
+  nnoremap <silent> <C-Left>  :vertical resize -2<CR>
+  nnoremap <silent> <C-Right> :vertical resize +2<CR>
+
+  let g:elite_mode=0                      " Disable arrows"
+  " Disable arrow movement, resize splits instead.
+  if get(g:, 'elite_mode')
+      nnoremap <C-Up>    :resize -2<CR>
+      nnoremap <C-Down>  :resize +2<CR>
+      nnoremap <C-Left>  :vertical resize -2<CR>
+      nnoremap <C-Right> :vertical resize +2<CR>
+  endif
 
 endif
 
