@@ -43,7 +43,8 @@
     "yaml",
     "json",
     "python",
-    "java"
+    "java",
+    "php"
   ],
   "coc.preferences.hoverTarget": "float",
   // prettier
