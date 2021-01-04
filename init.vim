@@ -1,8 +1,8 @@
-"    ____      _ __        _
-"   /  _/___  (_) /__   __(_)___ ___
-"   / // __ \/ / __/ | / / / __ `__ \
-" _/ // / / / / /__| |/ / / / / / / /
-"/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
+"   _______ ____ __
+"  / ___/ //_/ // /
+" / (_ / ,< / _  / 
+" \___/_/|_/_//_/  
+                 
 
 
 " General Settings
@@ -68,7 +68,8 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
-
+" let g:vimspector_base_dir='/Users/gkh/.config/nvim/vimspector-config'
+" let g:vimspector_enable_mappings = 'HUMAN'
 " Better nav for omnicomplete TODO figure out why this is being overridden
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")

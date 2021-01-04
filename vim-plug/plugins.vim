@@ -24,6 +24,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'RRethy/vim-illuminate'
     " For better changing and deleting words inside and around quote, double quote, parenthesis and bracket 
     Plug 'wellle/targets.vim'
+    " Colorscheme night-owl
+    Plug 'haishanh/night-owl.vim'
+    " Graphql
+    Plug 'jparise/vim-graphql'
+    " Firenvim - nvim in browser
+    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    " FZF Checkout
+    Plug 'stsewd/fzf-checkout.vim'
 
   if exists('g:vscode')
     " Easy motion for VSCode

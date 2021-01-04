@@ -117,7 +117,9 @@ let g:which_key_map.D = {
       \ 'i' : ['<Plug>VimspectorStepInto'                      , 'step into'],
       \ 'p' : ['<Plug>VimspectorPause'                         , 'pause'],
       \ 'r' : ['<Plug>VimspectorRestart'                       , 'restart'],
-      \ 's' : ['<Plug>VimspectorStop'                          , 'stop'],
+      \ 'R' : [':call vimspector#Reset()'                      , 'close debugging'],
+      \ 'S' : ['<Plug>VimspectorStop'                          , 'stop'],
+      \ 's' : [':call vimspector#Launch()'                     , 'start'],
       \ }
 
 " f is for find and replace
@@ -245,9 +247,18 @@ let g:which_key_map.g = {
       \ 'A' : [':CocCommand fzf-preview.GitStatus' , 'actions'],
       \ 'b' : [':Git blame'                        , 'blame'],
       \ 'B' : [':GBrowse'                          , 'browse'],
-      \ 'c' : [':Git commit'                       , 'commit'],
-      \ 'd' : [':Git diff'                         , 'diff'],
-      \ 'D' : [':Gvdiffsplit!'                       , 'diff split'],
+      \ 'c' : {
+            \ 'name': '+Git Operation',
+            \ 'c' : [':Git commit'                       , 'commit'],
+            \ 'o' : [':GBranches'                        , 'checkout branch'],
+            \ },
+      \ 'd' : {
+            \ 'name': '+diffget conflict',
+            \ 'd' : [':Gvdiffsplit!'               , 'diff split'],
+            \ 'h' : ['diffget //2'                 , 'get code from left'],
+            \ 'l' : ['diffget //3'                 , 'get code from right'],
+            \ },
+      \ 'D' :  [':Git diff'                   , 'diff'],
       \ 'g' : [':GGrep'                            , 'git grep'],
       \ 'G' : [':Gstatus'                          , 'status'],
       \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
@@ -266,6 +277,8 @@ let g:which_key_map.g = {
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
+      \ 'z' : [':diffget //2 '                 , 'get code from left'],
+      \ 'Z' : [':diffget //3 '                 , 'get code from right'],
       \ }
       " \ 'A' : [':Git add %'                        , 'add current'],
       " \ 'S' : [':!git status'                      , 'status'],

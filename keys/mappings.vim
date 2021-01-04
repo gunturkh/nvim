@@ -101,6 +101,18 @@ else
 
 endif
 
+" for git checkout using fzf_checkout
+let g:fzf_checkout_merge_settings = v:false
+let g:fzf_branch_actions = {
+      \ 'checkout': {
+      \   'prompt': 'Checkout> ',
+      \   'execute': 'echo system("{git} checkout {branch}")',
+      \   'multiple': v:false,
+      \   'keymap': 'enter',
+      \   'required': ['branch'],
+      \   'confirm': v:false,
+      \ },
+      \}
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")

@@ -1,0 +1,22 @@
+{
+  "configurations": {
+    "launch": {
+      "adapter": "chrome",
+      "breakpoints": {
+        "exception": {
+          "caught": "N",
+          "uncaught": "N",
+          "all": "N"
+        }
+      },
+      "configuration": {
+        "request": "launch",
+        "url": "http://localhost:8080/",
+        "webRoot": "${workspaceFolder}/",
+        "sourceMapPathOverrides": {
+          "webpack:///*": "$PWD/*"
+        }
+      }
+    }
+  }
+}
