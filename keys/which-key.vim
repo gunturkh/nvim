@@ -122,11 +122,20 @@ let g:which_key_map.D = {
       \ 's' : [':call vimspector#Launch()'                     , 'start'],
       \ }
 
-" f is for find and replace
-let g:which_key_map.f = {
+" F is for find and replace
+let g:which_key_map.F = {
       \ 'name' : '+find & replace' ,
       \ 'f' : [':Farr --source=vimgrep'    , 'file'],
       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
+      \ }
+
+" f is for file picker (using Telescope)
+let g:which_key_map.f = {
+      \ 'name' : '+Telescope file picker' ,
+      \ 'f' : [':Telescope find_files'    , 'file'],
+      \ 'g' : [':Telescope live_grep'     , 'live grep'],
+      \ 'b' : [':Telescope buffers'       , 'buffers'],
+      \ 'h' : [':Telescope help_tags'     , 'help tags'],
       \ }
 
 " k is for task
